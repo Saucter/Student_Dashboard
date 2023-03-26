@@ -6,11 +6,12 @@ using System.Threading.Tasks;
 
 namespace Dashboard_Project.Shared.Entities
 {
-    public class Admins
+    public class TeachersClasses
     {
-        public int id {get; set;}
-        public string Name {get; set;}
-        private string Username {get; set;}
-        private string Password {get; set;}
+        public int TeacherID {get; set;}
+        public int ClassID {get; set;}
+        public Teachers Teacher {get; set;}
+        public CLasses Class {get; set;}
+
     }
 }

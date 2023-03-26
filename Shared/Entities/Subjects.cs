@@ -6,13 +6,14 @@ using System.Threading.Tasks;
 
 namespace Dashboard_Project.Shared.Entities
 {
-    public class Teachers
+    public class Subjects
     {
         public int id {get; set;}
         public string Name {get; set;}
-        private string Username {get; set;}
-        private string Password {get; set;} = "rgotc123";
-        public List<CLasses> TeacherClases {get; set;}
-        public List<Subjects> TeacherSubjects {get; set;}
+
+        // public int TotalGrade()
+        // {
+            
+        // }
     }
 }
