@@ -10,6 +10,7 @@ namespace Dashboard_Project.Shared.Entities
     {
         public int id {get; set;}
         public string Name {get; set;}
+        public int ClassworkGrade {get; set;}
 
         // public int TotalGrade()
         // {
