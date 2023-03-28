@@ -11,7 +11,8 @@ namespace Dashboard_Project.Shared.Entities
     {
         public Students()
         {
-            Grades = GradesInitilizor(Class);
+            // Grades = GradesInitilizor(Class);
+            Username = CandidateNumber.ToString();
         }
         public int id {get; set;}
         public int CandidateNumber {get; set;}
@@ -19,14 +20,12 @@ namespace Dashboard_Project.Shared.Entities
         public DateTime Birthdate {get; set;}
         private string Username {get; set;}
         private string Password {get; set;} = "rgotc123";
-        public CLasses Class {get; set;} = new CLasses();
+        // public CLasses Class {get; set;} = new CLasses(null, null, null);
         public Dictionary<SubjectsList, Subjects> Grades {get; set;}
-
         public Dictionary<SubjectsList, Subjects> GradesInitilizor(CLasses Class)
         {
-            SubjectSelector Selector = new SubjectSelector();
             Dictionary<SubjectsList, Subjects> grades = new Dictionary<SubjectsList, Subjects>();
-            foreach(var subject in Selector.Selector(Class))
+            foreach(var subject in Class.ClassSubjects)
             {
                 grades.Add(subject, new Subjects());
             }

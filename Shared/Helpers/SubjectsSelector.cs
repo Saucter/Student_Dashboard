@@ -10,68 +10,49 @@ namespace Dashboard_Project.Shared.Helpers
     public class SubjectSelector
     {
         List<SubjectsList> subjectsList = new List<SubjectsList>();
-        public List<SubjectsList> Selector(CLasses Class)
+        public List<SubjectsList> Selector(int? Year)
         {
-            switch(Class.Year)
+            switch(Year)
             {
                 case 1:
                     subjectsList.AddRange(new List<SubjectsList>
                     {
-                        SubjectsList.Arabic, SubjectsList.English
+                        SubjectsList.Arabic, SubjectsList.Islamic, SubjectsList.English, SubjectsList.Science, SubjectsList.Life_Skills, SubjectsList.Social_Studies, SubjectsList.Candidates, SubjectsList.Math, SubjectsList.ICT
                     });
                     return subjectsList;
-                    break;
-                case 2:
+                case <= 4:
                     subjectsList.AddRange(new List<SubjectsList>
                     {
-                        SubjectsList.Arabic, SubjectsList.English
+                        SubjectsList.Arabic, SubjectsList.Islamic, SubjectsList.English, SubjectsList.Science, SubjectsList.Workshop, SubjectsList.Social_Studies, SubjectsList.Candidates, SubjectsList.Math, SubjectsList.ICT
                     });
                     return subjectsList;
-                    break;
-                case 3:
-                    subjectsList.AddRange(new List<SubjectsList>
-                    {
-                        SubjectsList.Arabic, SubjectsList.English
-                    });
-                    return subjectsList;
-                    break;
-                case 4:
-                    subjectsList.AddRange(new List<SubjectsList>
-                    {
-                        SubjectsList.Arabic, SubjectsList.English
-                    });
-                    return subjectsList;
-                    break;
                 case 5:
                     subjectsList.AddRange(new List<SubjectsList>
                     {
-                        SubjectsList.Arabic, SubjectsList.English
+                        SubjectsList.Arabic, SubjectsList.Islamic, SubjectsList.English, SubjectsList.Physics, SubjectsList.Chemistry, SubjectsList.Electronics, SubjectsList.Workshop, SubjectsList.Candidates, SubjectsList.Math, SubjectsList.ICT
                     });
                     return subjectsList;
-                    break;
                 case 6:
                     subjectsList.AddRange(new List<SubjectsList>
                     {
-                        SubjectsList.Arabic, SubjectsList.English
+                        SubjectsList.Arabic, SubjectsList.Islamic, SubjectsList.English, SubjectsList.Physics, SubjectsList.Chemistry, SubjectsList.Electronics, SubjectsList.Product_Design, SubjectsList.Material_Science, SubjectsList.Candidates, SubjectsList.Math, SubjectsList.ICT
                     });
                     return subjectsList;
-                    break;
                 case 7:
                     subjectsList.AddRange(new List<SubjectsList>
                     {
-                        SubjectsList.Arabic, SubjectsList.English
+                        SubjectsList.Arabic, SubjectsList.Islamic, SubjectsList.English, SubjectsList.Physics, SubjectsList.Chemistry, SubjectsList.Math, SubjectsList.BTEC_Electronics, SubjectsList.BTEC_Additive_Manufacturing, SubjectsList.BTEC_Thermodynamics, SubjectsList.BTEC_Microcontrollers, SubjectsList.BTEC_Delivery
                     });
                     return subjectsList;
-                    break;
                 case 8:
                     subjectsList.AddRange(new List<SubjectsList>
                     {
-                        SubjectsList.Arabic, SubjectsList.English
+                        SubjectsList.Arabic, SubjectsList.Islamic, SubjectsList.English, SubjectsList.Physics, SubjectsList.Chemistry, SubjectsList.Math, SubjectsList.BTEC_ICT, SubjectsList.BTEC_Product_Design, SubjectsList.BTEC_Project
                     });
                     return subjectsList;
-                    break;
+                default:
+                    return null;
             }
-            return null;
         }
     }
 }

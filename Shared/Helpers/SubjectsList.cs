@@ -26,15 +26,17 @@ namespace Dashboard_Project.Shared.Helpers
         Workshop,
         Candidates,
         Electronics,
+        Product_Design,
+        Material_Science,
 
         //BTEC Subjects
-        Thermodynamics,
-        Additive_Manufacturing,
-        Microcontrollers,
-        Delivery,
+        BTEC_Thermodynamics,
+        BTEC_Additive_Manufacturing,
+        BTEC_Microcontrollers,
+        BTEC_Delivery,
         BTEC_Electronics,
-        Product_Design,
-        Project,
+        BTEC_Product_Design,
+        BTEC_Project,
         BTEC_ICT
     }
 }

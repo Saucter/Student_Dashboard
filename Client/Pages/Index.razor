@@ -7,3 +7,24 @@
 Welcome to your new app.
 
 <SurveyPrompt Title="How is Blazor working for you?" />
+
+@foreach (var item in @Class.ClassSubjects)
+{
+    <li>@item.ToString()</li>
+}
+<hr>
+@foreach (var item in hey.Selector(5))
+{   
+    <li>@item.ToString()</li>
+}
+@if(true)
+{
+    Console.WriteLine(@Class.Year+" "+@Class.Name+"hjhdf");
+}
+
+@code
+{
+    public static new DateTime[] dates = { new DateTime(2015, 09, 01), new DateTime(2023, 06, 07) };
+    CLasses Class = new CLasses(8, "8A", dates);
+    SubjectSelector hey = new SubjectSelector();
+}
