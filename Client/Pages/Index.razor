@@ -6,25 +6,20 @@
 
 Welcome to your new app.
 
-<SurveyPrompt Title="How is Blazor working for you?" />
+<SurveyPrompt Title="How is Blazor working for you?"/>
 
 @foreach (var item in @Class.ClassSubjects)
 {
     <li>@item.ToString()</li>
 }
 <hr>
-@foreach (var item in hey.Selector(5))
-{   
-    <li>@item.ToString()</li>
-}
-@if(true)
+@foreach (var item in Student.Grades)
 {
-    Console.WriteLine(@Class.Year+" "+@Class.Name+"hjhdf");
+    <li>@item.Key.ToString() : @item.Value.Classwork</li>
 }
 
 @code
 {
-    public static new DateTime[] dates = { new DateTime(2015, 09, 01), new DateTime(2023, 06, 07) };
-    CLasses Class = new CLasses(8, "8A", dates);
-    SubjectSelector hey = new SubjectSelector();
+    static CLasses Class = new CLasses(8, "8A", new DateTime(2015, 09, 01), new DateTime(2023, 06, 07));
+    Students Student = new Students(1615, "Mohammed Ghalib Al-Hosni", new DateTime(2005, 10, 13), Class);
 }

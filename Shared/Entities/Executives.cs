@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Dashboard_Project.Shared.Entities
 {
-    public class Exeecutives
+    public class Executives
     {
         public int id {get; set;}
         public string Name {get; set;}

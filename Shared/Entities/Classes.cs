@@ -10,19 +10,23 @@ namespace Dashboard_Project.Shared.Entities
     public class CLasses
     {
         protected readonly SubjectSelector Selector = new SubjectSelector();
-        public CLasses(int Year, string Name, DateTime[] AcademicYear)
+        public CLasses(){}
+        public CLasses(int Year, string Letter, DateTime EnrollmentDate, DateTime GraduationDate)
         {
             this.Year = Year;
-            this.Name = Name;
-            this.AcademicYear = AcademicYear;
+            this.Letter = $"{Year.ToString()}{Letter}";
+            this.EnrollmentDate = EnrollmentDate;
+            this.GraduationDate = GraduationDate;
             ClassSubjects = Selector.Selector(Year);
         }
         public int id {get; set;}
         public int Year;
-        public string Name;
-        public DateTime[] AcademicYear {get; set;} = new DateTime[2];
+        public string Letter;
+        public DateTime EnrollmentDate {get; set;}
+        public DateTime GraduationDate {get; set;}
         public List<Students> ClassStudents {get; set;}
         public List<Teachers> ClassTeachers {get; set;}
         public List<SubjectsList> ClassSubjects;
+        public List<TeachersClasses> TeachersClasses {get; set;} = new List<TeachersClasses>();
     }
 }
