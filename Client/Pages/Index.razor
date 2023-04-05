@@ -15,7 +15,7 @@ Welcome to your new app.
 <hr>
 @foreach (var item in Student.Grades)
 {
-    <li>@item.Key.ToString() : @item.Value.Classwork</li>
+    <li>@item.SubjectName.ToString() : @item.Subject.Classwork</li>
 }
 
 @code

@@ -27,5 +27,6 @@ namespace blazorTestApp.Server.Controllers
         public DbSet<Students> Students {get; set;}
         public DbSet<Subjects> Subjects {get; set;}
         public DbSet<TeachersClasses> TeachersClasses {get; set;}
+        public DbSet<Grades> Grades {get; set;}
     }
 }

@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Dashboard_Project.Shared.Entities
 {
+    [Serializable]
     public class Subjects
     {
         public int id {get; set;}

@@ -1,8 +1,10 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Xml.Serialization;
 using Dashboard_Project.Shared.Helpers;
 
 namespace Dashboard_Project.Shared.Entities
@@ -19,6 +21,7 @@ namespace Dashboard_Project.Shared.Entities
             Grades = GradesInitilizor(Class);
             Username = CandidateNumber.ToString();
         }
+        
         public int id {get; set;}
         public int CandidateNumber {get; set;}
         public string Name {get; set;}
@@ -26,13 +29,15 @@ namespace Dashboard_Project.Shared.Entities
         private string Username {get; set;}
         private string Password {get; set;} = "rgotc123";
         public CLasses Class {get; set;} = new CLasses();
-        public Dictionary<SubjectsList, Subjects> Grades {get; set;}
-        public Dictionary<SubjectsList, Subjects> GradesInitilizor(CLasses Class)
+        [NotMapped]
+        public List<Grades> Grades {get; set;}
+        
+        public List<Grades> GradesInitilizor(CLasses Class)
         {
-            Dictionary<SubjectsList, Subjects> grades = new Dictionary<SubjectsList, Subjects>();
-            foreach(var subject in Class.ClassSubjects)
+            List<Grades> grades = new List<Grades>();
+            for(int i = 0; i < Class.ClassSubjects.Count(); i++)
             {
-                grades.Add(subject, new Subjects());
+                grades.Add(new Grades(Class.ClassSubjects[i], new Subjects()));
             }
             return grades;
         }
