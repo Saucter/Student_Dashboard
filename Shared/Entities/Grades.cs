@@ -9,6 +9,7 @@ namespace Dashboard_Project.Shared.Entities
 {
     public class Grades
     {
+        public Grades(){}
         public Grades(SubjectsList SubjectName, Subjects Subject)
         {
             this.SubjectName = SubjectName;
